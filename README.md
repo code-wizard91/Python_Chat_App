@@ -1,4 +1,4 @@
-##Flask Chat App
+## Flask Chat App
 
 A fully functional chat application developed on socket.io with bootstrap frontend.
 
