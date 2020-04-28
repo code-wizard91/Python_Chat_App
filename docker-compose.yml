@@ -10,7 +10,7 @@ services:
     build: nginx/
    
   pythonchat:
-    image: alimizan/petclinic-backend:latest
+    image: alimizan/python-chat-app:latest
     ports:
       - 5000:5000
     container_name: pythonchat
