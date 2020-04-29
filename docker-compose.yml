@@ -2,16 +2,18 @@ version: "3.3"
 
 services:
 
-  nginx:
-    image: alimizan/nginx-chat
-    ports:
-      - 80:80
-    container_name: nginx
-    build: nginx/
+#  nginx:
+#    image: alimizan/nginx-chat
+#    ports:
+#      - 80:80
+#    container_name: nginx
+#    build: nginx/
    
   pythonchat:
     image: alimizan/python-chat-app:latest
     ports:
       - 5000:5000
+    deploy:
+      replicas: 5
     container_name: pythonchat
     build: .
