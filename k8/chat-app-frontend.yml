@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: python-chat-app
+spec:
+  selector:
+    app: python-chat-app
+  ports: 
+  - protocol: TCP
+    port: 5000
+    targetPort: 5000
+  type: LoadBalancer
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-chat-app
+  labels:
+    app: python-chat-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: python-chat-app
+  template:
+    metadata:
+      labels:
+        app: python-chat-app
+    spec:
+      containers:
+      - name: python-chat-app
+        image: alimizan/python-chat-app:latest
+        ports:
+        - containerPort: 5000
