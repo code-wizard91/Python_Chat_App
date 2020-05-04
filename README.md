@@ -2,7 +2,9 @@
 
 A fully functional chat application developed on socket.io with bootstrap frontend.
 
-To Install Docker and Docker-Compose
+#### To use ...
+
+Install Docker and Docker-Compose
 
 Then run:
 
