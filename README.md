@@ -2,8 +2,9 @@
 
 A fully functional chat application developed on socket.io with bootstrap frontend.
 
-To run the server
+To Install Docker and Docker-Compose
 
-    pip install -r "requirements.txt"
-    python main.py
+Then run:
 
+- "docker-compose up -d"
+- The app will run on port 5000 locally.
